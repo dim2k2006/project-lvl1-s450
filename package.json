@@ -7,7 +7,6 @@
         "games",
         "hexlet"
     ],
-    "main": "dist/index.js",
     "bin": {
         "brain-games": "dist/bin/brain-games.js"
     },
