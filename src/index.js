@@ -9,4 +9,4 @@ const getUsername = () => {
     console.log(`Hello, ${userName}!`);
 };
 
-export {getUsername};
+export default getUsername;
