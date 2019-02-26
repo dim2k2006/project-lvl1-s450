@@ -20,7 +20,11 @@ const brainEven = () => {
   const userName = getUsername();
 
   const launch = (attempt) => {
-    if (attempt === successAttemptsRequired) return say(`Congratulations, ${userName}!`);
+    if (attempt === successAttemptsRequired) {
+      say(`Congratulations, ${userName}!`);
+
+      return;
+    }
 
     const question = getRandomInteger(1, 100);
 
@@ -30,12 +34,16 @@ const brainEven = () => {
 
     const result = isEven(question);
 
-    if (answer !== result) return say(`'${answer}' is wrong answer ;(. Correct answer was '${(answer === 'yes') ? 'no' : 'yes'}'.\nLet's try again, ${userName}!`);
+    if (answer !== result) {
+      say(`'${answer}' is wrong answer ;(. Correct answer was '${(answer === 'yes') ? 'no' : 'yes'}'.\nLet's try again, ${userName}!`);
 
-    return launch(attempt + 1);
+      return;
+    }
+
+    launch(attempt + 1);
   };
 
-  return launch(0);
+  launch(0);
 };
 
 export default brainEven;
