@@ -32,3 +32,9 @@ $ make publish
 ### Setup and launch
 
 [![asciicast](https://asciinema.org/a/Tdwsw02hW5k1j9cZBAcVW95GQ.svg)](https://asciinema.org/a/Tdwsw02hW5k1j9cZBAcVW95GQ)
+
+## Brain gcd game
+
+### Setup and launch
+
+[![asciicast](https://asciinema.org/a/n8z1ZfrefEgYOUhjzUW35ohlr.svg)](https://asciinema.org/a/n8z1ZfrefEgYOUhjzUW35ohlr)
