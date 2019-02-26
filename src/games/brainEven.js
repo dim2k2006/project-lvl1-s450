@@ -1,9 +1,12 @@
 import readlineSync from 'readline-sync';
-import greet from '../utils/greet/index';
-import say from '../utils/say/index';
-import getUsername from '../utils/getUsername/index';
-import getRandomInteger from '../utils/getRandomInteger/index';
+import utils from '../utils';
 
+const {
+  greet,
+  say,
+  getUsername,
+  getRandomInteger,
+} = utils;
 const successAttemptsRequired = 3;
 
 /**
