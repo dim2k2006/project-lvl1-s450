@@ -16,7 +16,7 @@ const brainCalc = () => {
     const expression = math.parse(question);
     const result = expression.evaluate();
 
-    return result;
+    return String(result);
   };
 
   const game = engine(gameConditions, getQuestion, checkResult);
