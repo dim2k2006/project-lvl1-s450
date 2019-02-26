@@ -35,7 +35,7 @@ const brainEven = () => {
     const result = isEven(question);
 
     if (answer !== result) {
-      say(`'${answer}' is wrong answer ;(. Correct answer was '${(answer === 'yes') ? 'no' : 'yes'}'.\nLet's try again, ${userName}!`);
+      say(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
 
       return;
     }
