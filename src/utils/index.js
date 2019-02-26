@@ -35,9 +35,21 @@ const greet = () => console.log('Welcome to the Brain Games!');
  */
 const say = (text = '') => console.log(text);
 
+/**
+ * Checks if number is even
+ * @param {Number} number
+ * @returns {String}
+ */
+const isEven = (number = 0) => {
+  const result = (number % 2 === 0) ? 'yes' : 'no';
+
+  return result;
+};
+
 export default {
   getRandomInteger,
   getUsername,
   greet,
   say,
+  isEven,
 };

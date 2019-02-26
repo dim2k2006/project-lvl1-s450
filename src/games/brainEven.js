@@ -6,6 +6,7 @@ const {
   say,
   getUsername,
   getRandomInteger,
+  isEven,
 } = utils;
 const successAttemptsRequired = 3;
 
@@ -27,9 +28,7 @@ const brainEven = () => {
 
     const answer = readlineSync.question('Your answer: ');
 
-    const result = (question % 2 === 0)
-      ? 'yes'
-      : 'no';
+    const result = isEven(question);
 
     if (answer !== result) return say(`'${answer}' is wrong answer ;(. Correct answer was '${(answer === 'yes') ? 'no' : 'yes'}'.\nLet's try again, ${userName}!`);
 
