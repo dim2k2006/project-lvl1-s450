@@ -4,6 +4,8 @@ import say from '../utils/say/index';
 import getUsername from '../utils/getUsername/index';
 import getRandomInteger from '../utils/getRandomInteger/index';
 
+const successAttemptsRequired = 3;
+
 /**
  * Brain even game
  */
@@ -12,9 +14,8 @@ const brainEven = () => {
   say('Answer "yes" if number even otherwise answer "no".');
 
   const userName = getUsername();
-  const successAttemptsRequired = 3;
 
-  const launch = (attempt = 0) => {
+  const launch = (attempt) => {
     if (attempt === successAttemptsRequired) return say(`Congratulations, ${userName}!`);
 
     const randomNumber = getRandomInteger(1, 100);
@@ -32,7 +33,7 @@ const brainEven = () => {
     return launch(attempt + 1);
   };
 
-  return launch();
+  return launch(0);
 };
 
 export default brainEven;
