@@ -9,4 +9,13 @@ const getUsername = () => {
     console.log(`Hello, ${userName}!`);
 };
 
-export default getUsername;
+/**
+ * Launches game
+ */
+const launchGame = () => {
+    console.log('Welcome to the Brain Games!');
+
+    getUsername();
+};
+
+export default launchGame;
