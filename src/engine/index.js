@@ -14,7 +14,7 @@ const successAttemptsRequired = 3;
 const engine = (gameConditions, getQuestion, checkResult) => () => {
   greet();
 
-  say(gameConditions);
+  say(`${gameConditions}\n`);
 
   const userName = getUsername();
 
@@ -38,6 +38,8 @@ const engine = (gameConditions, getQuestion, checkResult) => () => {
 
       return;
     }
+
+    say('Correct!');
 
     launch(attempt + 1);
   };

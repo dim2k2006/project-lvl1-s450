@@ -19,7 +19,7 @@ const getRandomInteger = (min, max) => {
 const getUsername = () => {
   const userName = readlineSync.question('May I have your name? ');
 
-  console.log(`Hello, ${userName}!`);
+  console.log(`Hello, ${userName}!\n`);
 
   return userName;
 };
