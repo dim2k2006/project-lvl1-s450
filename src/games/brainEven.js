@@ -1,49 +1,19 @@
-import readlineSync from 'readline-sync';
+import engine from '../engine';
 import utils from '../utils';
 
-const {
-  greet,
-  say,
-  getUsername,
-  getRandomInteger,
-  isEven,
-} = utils;
-const successAttemptsRequired = 3;
+const { getRandomInteger, isEven } = utils;
 
 /**
  * Brain even game
  */
 const brainEven = () => {
-  greet();
-  say('Answer "yes" if number even otherwise answer "no".');
+  const gameConditions = 'Answer "yes" if number even otherwise answer "no".';
+  const getQuestion = () => getRandomInteger(1, 100);
+  const checkResult = question => isEven(question);
 
-  const userName = getUsername();
+  const game = engine(gameConditions, getQuestion, checkResult);
 
-  const launch = (attempt) => {
-    if (attempt === successAttemptsRequired) {
-      say(`Congratulations, ${userName}!`);
-
-      return;
-    }
-
-    const question = getRandomInteger(1, 100);
-
-    say(`Question: ${question}`);
-
-    const answer = readlineSync.question('Your answer: ');
-
-    const result = isEven(question);
-
-    if (answer !== result) {
-      say(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
-
-      return;
-    }
-
-    launch(attempt + 1);
-  };
-
-  launch(0);
+  game();
 };
 
 export default brainEven;
