@@ -80,6 +80,25 @@ const getRandomExpression = () => {
   return `${num1} ${sign} ${num2}`;
 };
 
+/**
+ * Finds greatest common divisor
+ * @param {Number} num1
+ * @param {Number} num2
+ * @returns {Number}
+ */
+const getGcd = (num1, num2) => {
+  let x = Math.abs(num1);
+  let y = Math.abs(num2);
+
+  while (y) {
+    const t = y;
+    y = x % y;
+    x = t;
+  }
+
+  return x;
+};
+
 export default {
   getRandomInteger,
   getUsername,
@@ -87,4 +106,5 @@ export default {
   say,
   isEven,
   getRandomExpression,
+  getGcd,
 };
