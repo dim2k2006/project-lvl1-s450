@@ -20,3 +20,9 @@ $ make start
 ```sh
 $ make publish
 ```
+
+## Brain even game
+
+### Setup and launch
+
+[![asciicast](https://asciinema.org/a/uYWoW4vbN1n34NAZKdpxzjDi3.svg)](https://asciinema.org/a/uYWoW4vbN1n34NAZKdpxzjDi3)
