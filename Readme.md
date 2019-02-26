@@ -26,3 +26,9 @@ $ make publish
 ### Setup and launch
 
 [![asciicast](https://asciinema.org/a/uYWoW4vbN1n34NAZKdpxzjDi3.svg)](https://asciinema.org/a/uYWoW4vbN1n34NAZKdpxzjDi3)
+
+## Brain calc game
+
+### Setup and launch
+
+[![asciicast](https://asciinema.org/a/Tdwsw02hW5k1j9cZBAcVW95GQ.svg)](https://asciinema.org/a/Tdwsw02hW5k1j9cZBAcVW95GQ)
