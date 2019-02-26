@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
-import greet from '../../utils/greet';
-import say from '../../utils/say';
-import getUsername from '../../utils/getUsername';
-import getRandomInteger from '../../utils/getRandomInteger';
+import greet from '../utils/greet/index';
+import say from '../utils/say/index';
+import getUsername from '../utils/getUsername/index';
+import getRandomInteger from '../utils/getRandomInteger/index';
 
 /**
  * Brain even game
