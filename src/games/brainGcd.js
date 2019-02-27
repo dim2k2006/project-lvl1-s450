@@ -5,7 +5,7 @@ import { getRandomInteger, getGcd } from '../utils';
  * Brain gcd game
  */
 const brainGcd = () => {
-  const gameConditions = 'Find the greatest common divisor of given numbers.';
+  const description = 'Find the greatest common divisor of given numbers.';
   const getQuestion = () => {
     const num1 = getRandomInteger(1, 100);
     const num2 = getRandomInteger(1, 100);
@@ -20,7 +20,7 @@ const brainGcd = () => {
     return String(result);
   };
 
-  const game = engine(gameConditions, getQuestion, checkResult);
+  const game = engine(description, getQuestion, checkResult);
 
   game();
 };

@@ -8,7 +8,7 @@ const math = new Parser();
  * Brain calc game
  */
 const brainCalc = () => {
-  const gameConditions = 'What is the result of the expression?';
+  const description = 'What is the result of the expression?';
   const getQuestion = () => getRandomExpression();
   const checkResult = (question) => {
     const expression = math.parse(question);
@@ -17,7 +17,7 @@ const brainCalc = () => {
     return String(result);
   };
 
-  const game = engine(gameConditions, getQuestion, checkResult);
+  const game = engine(description, getQuestion, checkResult);
 
   game();
 };

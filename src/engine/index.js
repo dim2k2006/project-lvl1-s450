@@ -5,14 +5,14 @@ const successAttemptsRequired = 3;
 
 /**
  * Creates new game
- * @param {String} gameConditions
+ * @param {String} description - game description
  * @param {Function} getQuestion
  * @param {Function} checkResult
  */
-const engine = (gameConditions, getQuestion, checkResult) => () => {
+const engine = (description, getQuestion, checkResult) => () => {
   greet();
 
-  say(`${gameConditions}\n`);
+  say(`${description}\n`);
 
   const userName = getUsername();
 
