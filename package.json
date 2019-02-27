@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "expr-eval": "^1.2.2",
+    "lodash": "^4.17.11",
     "readline-sync": "^1.4.9"
   }
 }
