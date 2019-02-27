@@ -1,5 +1,16 @@
 import engine from '../engine';
-import { getRandomInteger, isEven } from '../utils';
+import { getRandomInteger } from '../utils';
+
+/**
+ * Checks if number is even
+ * @param {Number} number
+ * @returns {String}
+ */
+const isEven = (number = 0) => {
+  const result = (number % 2 === 0) ? 'yes' : 'no';
+
+  return result;
+};
 
 /**
  * Brain even game

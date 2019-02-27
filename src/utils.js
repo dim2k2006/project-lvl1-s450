@@ -12,17 +12,6 @@ const getRandomInteger = (min, max) => {
 };
 
 /**
- * Checks if number is even
- * @param {Number} number
- * @returns {String}
- */
-const isEven = (number = 0) => {
-  const result = (number % 2 === 0) ? 'yes' : 'no';
-
-  return result;
-};
-
-/**
  * Generates math expression sign
  * @param {Number} number
  * @returns {String}
