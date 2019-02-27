@@ -44,3 +44,9 @@ $ make publish
 ### Setup and launch
 
 [![asciicast](https://asciinema.org/a/C7EqKIT5Lt7FIEkjSSzTut2rA.svg)](https://asciinema.org/a/C7EqKIT5Lt7FIEkjSSzTut2rA)
+
+## Brain prime game
+
+### Setup and launch
+
+[![asciicast](https://asciinema.org/a/nQc1pXqzfvSzyxAQ8ZRtpSM1Y.svg)](https://asciinema.org/a/nQc1pXqzfvSzyxAQ8ZRtpSM1Y)
