@@ -6,10 +6,9 @@ const successAttemptsRequired = 3;
 /**
  * Creates new game
  * @param {String} description - game description
- * @param {Function} getQuestion
- * @param {Function} checkResult
+ * @param {Function} getData - retrieves question and correct result
  */
-const engine = (description, getQuestion, checkResult) => {
+const engine = (description, getData) => {
   greet();
 
   say(`${description}\n`);
@@ -23,13 +22,11 @@ const engine = (description, getQuestion, checkResult) => {
       return;
     }
 
-    const question = getQuestion();
+    const { question, result } = getData();
 
     say(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-
-    const result = checkResult(question);
 
     if (answer !== result) {
       say(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
