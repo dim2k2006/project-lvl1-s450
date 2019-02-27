@@ -9,7 +9,7 @@ const successAttemptsRequired = 3;
  * @param {Function} getQuestion
  * @param {Function} checkResult
  */
-const engine = (description, getQuestion, checkResult) => () => {
+const engine = (description, getQuestion, checkResult) => {
   greet();
 
   say(`${description}\n`);

@@ -9,9 +9,7 @@ const brainEven = () => {
   const getQuestion = () => getRandomInteger(1, 100);
   const checkResult = question => isEven(question);
 
-  const game = engine(description, getQuestion, checkResult);
-
-  game();
+  engine(description, getQuestion, checkResult);
 };
 
 export default brainEven;

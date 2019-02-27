@@ -17,9 +17,7 @@ const brainCalc = () => {
     return String(result);
   };
 
-  const game = engine(description, getQuestion, checkResult);
-
-  game();
+  engine(description, getQuestion, checkResult);
 };
 
 export default brainCalc;
