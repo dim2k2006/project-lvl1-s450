@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { greet, say, getUsername } from './utils/index';
+import { greet, say, getUsername } from './utils';
 
 const successAttemptsRequired = 3;
 
