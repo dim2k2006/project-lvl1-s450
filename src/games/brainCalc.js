@@ -1,8 +1,6 @@
 import { Parser } from 'expr-eval';
 import engine from '../engine';
-import utils from '../utils';
-
-const { getRandomExpression } = utils;
+import { getRandomExpression } from '../utils';
 
 const math = new Parser();
 

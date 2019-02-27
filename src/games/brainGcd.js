@@ -1,7 +1,5 @@
 import engine from '../engine';
-import utils from '../utils';
-
-const { getRandomInteger, getGcd } = utils;
+import { getRandomInteger, getGcd } from '../utils';
 
 /**
  * Brain gcd game

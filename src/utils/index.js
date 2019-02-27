@@ -99,7 +99,7 @@ const getGcd = (num1, num2) => {
   return x;
 };
 
-export default {
+export {
   getRandomInteger,
   getUsername,
   greet,

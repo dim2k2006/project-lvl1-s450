@@ -1,7 +1,5 @@
 import engine from '../engine';
-import utils from '../utils';
-
-const { getRandomInteger, isEven } = utils;
+import { getRandomInteger, isEven } from '../utils';
 
 /**
  * Brain even game
