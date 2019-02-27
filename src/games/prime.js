@@ -7,9 +7,11 @@ import { getRandomInteger } from '../utils';
  * @returns {String}
  */
 const isPrime = (number) => {
-  const result = (number % 2 === 0) ? 'yes' : 'no';
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) return 'no';
+  }
 
-  return result;
+  return number > 1 ? 'yes' : 'no';
 };
 
 /**
