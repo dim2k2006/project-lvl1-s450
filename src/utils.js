@@ -11,31 +11,6 @@ const getRandomInteger = (min, max) => {
   return result;
 };
 
-/**
- * Finds greatest common divisor
- * @param {Number} num1
- * @param {Number} num2
- * @returns {Number}
- */
-const getGcd = (num1, num2) => {
-  let x = Math.abs(num1);
-  let y = Math.abs(num2);
-
-  while (y) {
-    const t = y;
-    y = x % y;
-    x = t;
-  }
-
-  return x;
-};
-
 export {
   getRandomInteger,
-  getUsername,
-  greet,
-  say,
-  isEven,
-  getRandomExpression,
-  getGcd,
 };
