@@ -15,7 +15,7 @@ const isEven = (number) => {
 /**
  * Brain even game
  */
-const brainEven = () => {
+const even = () => {
   const description = 'Answer "yes" if number even otherwise answer "no".';
   const getData = () => {
     const question = getRandomInteger(1, 100);
@@ -27,4 +27,4 @@ const brainEven = () => {
   engine(description, getData);
 };
 
-export default brainEven;
+export default even;
