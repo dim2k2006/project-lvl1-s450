@@ -9,15 +9,15 @@ const math = new Parser();
  */
 const brainCalc = () => {
   const description = 'What is the result of the expression?';
-  const getQuestion = () => getRandomExpression();
-  const checkResult = (question) => {
+  const getData = () => {
+    const question = getRandomExpression();
     const expression = math.parse(question);
-    const result = expression.evaluate();
+    const result = String(expression.evaluate());
 
-    return String(result);
+    return { question, result };
   };
 
-  engine(description, getQuestion, checkResult);
+  engine(description, getData);
 };
 
 export default brainCalc;
