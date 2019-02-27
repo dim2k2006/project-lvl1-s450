@@ -6,21 +6,16 @@ import { getRandomInteger, getGcd } from '../utils';
  */
 const brainGcd = () => {
   const description = 'Find the greatest common divisor of given numbers.';
-  const getQuestion = () => {
+  const getData = () => {
     const num1 = getRandomInteger(1, 100);
     const num2 = getRandomInteger(1, 100);
+    const question = `${num1} ${num2}`;
+    const result = String(getGcd(num1, num2));
 
-    return `${num1} ${num2}`;
-  };
-  const checkResult = (string) => {
-    const [num1, num2] = string.split(' ');
-
-    const result = getGcd(num1, num2);
-
-    return String(result);
+    return { question, result };
   };
 
-  engine(description, getQuestion, checkResult);
+  engine(description, getData);
 };
 
 export default brainGcd;
