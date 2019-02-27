@@ -1,7 +1,28 @@
 import readlineSync from 'readline-sync';
-import { greet, say, getUsername } from './utils';
 
 const successAttemptsRequired = 3;
+
+/**
+ * Gets and prints user name
+ */
+const getUsername = () => {
+  const userName = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello, ${userName}!\n`);
+
+  return userName;
+};
+
+/**
+ * Greets user
+ */
+const greet = () => console.log('Welcome to the Brain Games!');
+
+/**
+ * Says something to user
+ * @param {String} text
+ */
+const say = (text = '') => console.log(text);
 
 /**
  * Creates new game
