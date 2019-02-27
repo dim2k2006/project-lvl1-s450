@@ -12,5 +12,6 @@ const getRandomInteger = (min, max) => {
 };
 
 export {
+  // eslint-disable-next-line import/prefer-default-export
   getRandomInteger,
 };
