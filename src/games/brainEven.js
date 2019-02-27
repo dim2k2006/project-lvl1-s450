@@ -6,7 +6,7 @@ import { getRandomInteger } from '../utils';
  * @param {Number} number
  * @returns {String}
  */
-const isEven = (number = 0) => {
+const isEven = (number) => {
   const result = (number % 2 === 0) ? 'yes' : 'no';
 
   return result;
