@@ -39,7 +39,7 @@ const getRandomExpression = () => {
 /**
  * Brain calc game
  */
-const brainCalc = () => {
+const calc = () => {
   const description = 'What is the result of the expression?';
   const getData = () => {
     const question = getRandomExpression();
@@ -53,4 +53,4 @@ const brainCalc = () => {
   engine(description, getData);
 };
 
-export default brainCalc;
+export default calc;
