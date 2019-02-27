@@ -23,7 +23,7 @@ const getGcd = (num1, num2) => {
 /**
  * Brain gcd game
  */
-const brainGcd = () => {
+const gcd = () => {
   const description = 'Find the greatest common divisor of given numbers.';
   const getData = () => {
     const num1 = getRandomInteger(1, 100);
@@ -37,4 +37,4 @@ const brainGcd = () => {
   engine(description, getData);
 };
 
-export default brainGcd;
+export default gcd;
