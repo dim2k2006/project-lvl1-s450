@@ -38,3 +38,9 @@ $ make publish
 ### Setup and launch
 
 [![asciicast](https://asciinema.org/a/n8z1ZfrefEgYOUhjzUW35ohlr.svg)](https://asciinema.org/a/n8z1ZfrefEgYOUhjzUW35ohlr)
+
+## Brain progression game
+
+### Setup and launch
+
+[![asciicast](https://asciinema.org/a/C7EqKIT5Lt7FIEkjSSzTut2rA.svg)](https://asciinema.org/a/C7EqKIT5Lt7FIEkjSSzTut2rA)
