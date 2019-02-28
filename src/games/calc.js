@@ -32,8 +32,8 @@ const getSign = (number) => {
 const getRandomExpression = () => {
   const num1 = getRandomInteger(1, 100);
   const num2 = getRandomInteger(1, 100);
-  const num3 = getRandomInteger(1, 3);
-  const sign = getSign(num3);
+  const signId = getRandomInteger(1, 3);
+  const sign = getSign(signId);
 
   return `${num1} ${sign} ${num2}`;
 };
