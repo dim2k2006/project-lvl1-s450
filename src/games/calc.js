@@ -2,6 +2,8 @@ import { Parser } from 'expr-eval';
 import engine from '../engine';
 import { getRandomInteger } from '../utils';
 
+const description = 'What is the result of the expression?';
+
 /**
  * Generates math expression sign
  * @param {Number} number
@@ -37,20 +39,21 @@ const getRandomExpression = () => {
 };
 
 /**
+ * Retrieves data needed for game
+ * @returns {Object}
+ */
+const getData = () => {
+  const question = getRandomExpression();
+  const math = new Parser();
+  const expression = math.parse(question);
+  const answer = String(expression.evaluate());
+
+  return { question, answer };
+};
+
+/**
  * Brain calc game
  */
-const calc = () => {
-  const description = 'What is the result of the expression?';
-  const getData = () => {
-    const question = getRandomExpression();
-    const math = new Parser();
-    const expression = math.parse(question);
-    const result = String(expression.evaluate());
-
-    return { question, result };
-  };
-
-  engine(description, getData);
-};
+const calc = () => engine(description, getData);
 
 export default calc;
