@@ -9,11 +9,12 @@ const progressionLength = 10;
  * Generates arithmetic progression
  * @param {Number} firstElement
  * @param {Number} step
+ * @param {Number} length
  * @returns {Array}
  */
-const getProgression = (firstElement, step) => {
+const getProgression = (firstElement, step, length) => {
   const iter = (accumulator) => {
-    if (accumulator.length === progressionLength) return accumulator;
+    if (accumulator.length === length) return accumulator;
 
     const lastNum = accumulator[accumulator.length - 1];
 
@@ -30,7 +31,7 @@ const getProgression = (firstElement, step) => {
 const getData = () => {
   const firstElement = getRandomInteger(1, 100);
   const step = getRandomInteger(1, 6);
-  const progression = getProgression(firstElement, step);
+  const progression = getProgression(firstElement, step, progressionLength);
   const randomIndex = getRandomInteger(0, progressionLength - 1);
   const question = progression.map((item, index) => {
     if (randomIndex === index) return '..';
