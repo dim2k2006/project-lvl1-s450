@@ -10,10 +10,10 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
  */
 const isPrime = (number) => {
   for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) return 'no';
+    if (number % i === 0) return false;
   }
 
-  return number > 1 ? 'yes' : 'no';
+  return number > 1;
 };
 
 /**
@@ -22,7 +22,7 @@ const isPrime = (number) => {
  */
 const getData = () => {
   const question = getRandomInteger(1, 100);
-  const answer = isPrime(question);
+  const answer = isPrime(question) ? 'yes' : 'no';
 
   return { question, answer };
 };
