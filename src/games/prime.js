@@ -9,7 +9,9 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
  * @returns {String}
  */
 const isPrime = (number) => {
-  for (let i = 2; i < number; i += 1) {
+  const squareRoot = Math.sqrt(number);
+
+  for (let i = 2; i <= squareRoot; i += 1) {
     if (number % i === 0) return false;
   }
 
