@@ -2,6 +2,8 @@ import flow from 'lodash/fp/flow';
 import engine from '../engine';
 import { getRandomInteger } from '../utils';
 
+const description = 'What number is missing in the progression?';
+
 const progressionLength = 10;
 
 /**
@@ -51,22 +53,23 @@ const getSequence = flow(
 );
 
 /**
+ * Retrieves data needed for game
+ * @returns {Object}
+ */
+const getData = () => {
+  const { sequence, hiddenElement } = getSequence();
+
+  const question = sequence.join(' ');
+
+  return {
+    question,
+    answer: hiddenElement,
+  };
+};
+
+/**
  * Brain progression game
  */
-const progression = () => {
-  const description = 'What number is missing in the progression?';
-  const getData = () => {
-    const { sequence, hiddenElement } = getSequence();
-
-    const question = sequence.join(' ');
-
-    return {
-      question,
-      result: hiddenElement,
-    };
-  };
-
-  engine(description, getData);
-};
+const progression = () => engine(description, getData);
 
 export default progression;
