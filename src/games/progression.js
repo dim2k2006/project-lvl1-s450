@@ -1,4 +1,3 @@
-import flow from 'lodash/fp/flow';
 import engine from '../engine';
 import { getRandomInteger } from '../utils';
 
@@ -25,45 +24,24 @@ const getProgression = (firstElement, step) => {
 };
 
 /**
- * Hides random element in progression
- * @param {Array} progression
- * @returns {Object}
- */
-const hideRandomElement = (progression) => {
-  const index = getRandomInteger(1, progressionLength - 1);
-  const hiddenElement = String(progression[index]);
-  const newProgression = [
-    ...progression.slice(0, index),
-    '..',
-    ...progression.slice(index + 1),
-  ];
-
-  return {
-    sequence: newProgression,
-    hiddenElement,
-  };
-};
-
-/**
- * Generates numeric sequence
- */
-const getSequence = flow(
-  getProgression,
-  hideRandomElement,
-);
-
-/**
  * Retrieves data needed for game
  * @returns {Object}
  */
 const getData = () => {
-  const { sequence, hiddenElement } = getSequence(getRandomInteger(1, 100), getRandomInteger(1, 6));
+  const firstElement = getRandomInteger(1, 100);
+  const step = getRandomInteger(1, 6);
+  const progression = getProgression(firstElement, step);
+  const randomIndex = getRandomInteger(0, progressionLength - 1);
+  const question = progression.map((item, index) => {
+    if (randomIndex === index) return '..';
 
-  const question = sequence.join(' ');
+    return item;
+  }).join(' ');
+  const answer = String(firstElement + step * randomIndex);
 
   return {
     question,
-    answer: hiddenElement,
+    answer,
   };
 };
 
