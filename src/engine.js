@@ -43,14 +43,14 @@ const engine = (description, getData) => {
       return;
     }
 
-    const { question, result } = getData();
+    const { question, answer } = getData();
 
     say(`Question: ${question}`);
 
-    const answer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    if (answer !== result) {
-      say(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\n`);
+    if (userAnswer !== answer) {
+      say(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\n`);
       say(`Let's try again, ${userName}!`);
 
       return;
